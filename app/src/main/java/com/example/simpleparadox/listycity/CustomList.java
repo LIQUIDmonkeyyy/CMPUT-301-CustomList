@@ -60,8 +60,13 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public boolean hasCity(String city){
-
-        return false;
+        boolean flag=false;
+        for (int i=0;i<cities.size();i++){
+            if (cities.get(i).getCityName()==city){
+                flag=true;
+            }
+        }
+        return flag;
     }
 
 
